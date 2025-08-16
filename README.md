@@ -1,92 +1,26 @@
-# Mindustry-Gatling-Turret-Mod.
-A high rate-of-fire turret. Its power and projectile count increase with each ammo tier.
-type: Turret
-name: automatic-gatling-turret
-displayName: Automatic Gatling Turret
-description: A high rate-of-fire turret. Its power and projectile count increase with each ammo tier.
+# Automatic Gatling Turret Mod
 
-// Building requirements
-requirements: [
-    copper/75
-    lead/120
-    silicon/80
-]
-size: 2
-health: 400
+### Project Description
 
-// Turret properties
-rotateSpeed: 10
-range: 150
-shots: 1
-reload: 72
-minReload: 4
-shootStatus: unmoving
-shootStatusDuration: 300
-shootType: ShootPatternType
-laserColor: [1, 0, 0, 0.75]
-laserWidth: 0.5
-laserLength: 150
+This is a custom Mindustry mod that introduces a new, highly-configurable turret. The **Automatic Gatling Turret** is designed for high-volume, rapid-fire defense, specializing in shredding enemy swarms.
 
-// Ammunition tiers with different projectile counts and effects
-ammo: {
-    // TIER 1: LEAD AMMO
-    lead: {
-        bullet: {
-            type: BasicBulletType
-            damage: 2
-            speed: 5
-            shots: 1
-        }
-    }
-    
-    // TIER 2: COPPER AMMO
-    copper: {
-        bullet: {
-            type: BasicBulletType
-            damage: 4
-            speed: 6
-            lifetime: 25
-            shots: 2
-        }
-    }
+### Key Features
 
-    // TIER 3: GRAPHITE AMMO
-    graphite: {
-        bullet: {
-            type: BasicBulletType
-            damage: 6
-            speed: 7
-            lifetime: 22
-            splashDamage: 10
-            splashDamageRadius: 10
-            shots: 3
-        }
-    }
+* **Variable Fire Rate:** The turret "spins up" as it fires, increasing its rate of fire from 1.2 shots per second to a blazing 0.07 shots per second.
+* **Tiered Ammunition:** Its effectiveness scales with the resources you supply. Different ammo types increase both the damage and the number of projectiles fired per volley.
+* **Grand Tier Ammo:** A special late-game ammo type that adds powerful chain lightning and piercing effects to its projectiles, making it effective against all enemy types.
+* **Laser Pointer:** A built-in laser pointer shows you where the turret is aiming, providing a clear visual cue for targeting.
 
-    // TIER 4: PLASTANIUM AMMO
-    plastanium: {
-        bullet: {
-            type: BasicBulletType
-            damage: 8
-            speed: 8
-            lifetime: 20
-            shots: 4
-        }
-    }
+### Installation
 
-    // TIER 5: GRAND TIER AMMO (SURGE ALLOY)
-    surge-alloy: {
-        bullet: {
-            type: BasicBulletType
-            damage: 10
-            speed: 9
-            lifetime: 20
-            pierce: true
-            shots: 5
-            
-            lightning: 3
-            lightningLength: 10
-            lightningDamage: 15
-        }
-    }
-}
+1.  Create a new folder named `automatic-gatling-mod`.
+2.  Copy the `README.md` file, the `mod.hjson` file, and the entire `content/` and `sprites/` folder structure into your new mod folder.
+3.  Place the `automatic-gatling-mod` folder into your Mindustry mods directory.
+    * **Windows:** `%appdata%\Mindustry\mods\`
+    * **Linux:** `~/.local/share/Mindustry/mods/`
+    * **macOS:** `~/Library/Application Support/Mindustry/mods/`
+4.  Launch Mindustry, go to the "Mods" menu, and enable the mod.
+
+### Credits
+
+* Mod created by A.I. Assistant
